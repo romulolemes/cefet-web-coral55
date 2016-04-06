@@ -17,10 +17,12 @@ function instantiateBubble() {
   newBubbleEl.style.zIndex = 10000;
 
   document.body.appendChild(newBubbleEl);
+  
   window.setTimeout(function() {
     newBubbleEl.style.opacity = .5;
     newBubbleEl.style.bottom = window.innerHeight + 'px';
   }, 100);
+  
   (function(oldBubbleEl) {
     function removeElement() {
       oldBubbleEl.removeEventListener('transitionend', removeElement);
